@@ -143,7 +143,7 @@ public class DiscordBot extends SimpleBot {
         // unless explicitly required by an addon.
         intents.remove(GatewayIntent.GUILD_PRESENCES);
         intents.remove(GatewayIntent.GUILD_MEMBERS); // MCI patch 2026-11-21: privileged, only enabled if an addon requires it
-        //intents.remove(GatewayIntent.MESSAGE_CONTENT);
+        intents.remove(GatewayIntent.MESSAGE_CONTENT); // MCI patch 2026-11-23: privileged, only enabled if an addon requires it
 
         Set<SimpleAddon> theAddons = spicord.getAddonManager().getAddons(this);
 
